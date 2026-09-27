@@ -27,17 +27,18 @@ Access and test the live application directly in your web browser without instal
 ---
 
 ## 🛠️ Architecture & Mathematical Foundation
+```text
 ┌─────────────────┐     ┌───────────────────────┐     ┌──────────────────────┐
-│ Content Engine  │ ──> │  TF-IDF Vectorizer    │ ──> │ Cosine Similarity    │
-│ (Genres/Titles) │     │  (Sparse Text Matrix) │     │ Vector Space         │
+│ Content Engine  │ ──> │   TF-IDF Vectorizer   │ ──> │  Cosine Similarity   │
+│ (Genres/Titles) │     │ (Sparse Text Matrix)  │     │     Vector Space     │
 └─────────────────┘     └───────────────────────┘     └──────────────────────┘
-│
-▼
+                                                                 │
+                                                                 ▼
 ┌─────────────────┐     ┌───────────────────────┐     ┌──────────────────────┐
-│  Interactive    │ ──> │ Real-Time SVD Fold-In │ ──> │ Hybrid Scoring Engine│
-│   Streamlit UI  │     │ Latent Space q=(r-μ)V │     │  α·S_cont + (1-α)S_cf│
+│   Interactive   │ ──> │ Real-Time SVD Fold-In │ ──> │ Hybrid Scoring Engine│
+│  Streamlit UI   │     │ Latent Space q=(r-μ)V │     │ α·S_cont + (1-α)S_cf │
 └─────────────────┘     └───────────────────────┘     └──────────────────────┘
-
+```
 ### 1. Content-Based Filtering (TF-IDF)
 Movie titles and genre strings are tokenized into a term frequency-inverse document frequency matrix. Similarity between items is computed via Cosine Similarity:
 
