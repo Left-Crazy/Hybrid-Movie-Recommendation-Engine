@@ -26,6 +26,16 @@ Access and test the live application directly in your web browser without instal
 
 ---
 
+## 🛠️ Tech Stack
+
+* **Language & UI:** Python 3.9+ | Streamlit
+* **Machine Learning:** scikit-learn (`TruncatedSVD`, `TfidfVectorizer`), NumPy, SciPy
+* **Data Handling:** Pandas | MovieLens Dataset (`ml-latest-small`)
+* **API Integration:** TMDB REST API (Live Movie Posters)
+* **Version Control & Hosting:** GitHub | Streamlit Community Cloud
+
+---
+
 ## 🛠️ Architecture & Mathematical Foundation
 ```text
 ┌─────────────────┐     ┌───────────────────────┐     ┌──────────────────────┐
